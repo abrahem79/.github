@@ -83,3 +83,18 @@ if (require.main === module) {
 }
 
 module.exports = { createChatSession, submitQuery };
+
+/**
+ * Payment middleware configuration example.
+ */
+const paymentConfig = {
+  "GET /weather": {
+    accepts: [
+      { network: "ethereum", symbol: "USDC" },
+      { network: "polygon", symbol: "USDC" }
+    ],
+    description: "Weather data",
+  },
+};
+
+console.log('Payment Middleware Configured:', JSON.stringify(paymentConfig, null, 2));
